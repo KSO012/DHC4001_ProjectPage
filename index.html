@@ -198,11 +198,21 @@
         <div class="content has-text-justified">
           <p>
             본 프로젝트는 수축기·이완기 혈압을 제외한 다른 데이터로 고혈압을 예측하는 것을 목표로 합니다. 이에 기준년도와 가입자일련번호, 구강검진수검여부는 기여도 낮을 것으로 생각하였고, 기준년도, 가입자일련번호, 수축기혈압, 이완기혈압, 구강검진수검여부 column을 사전에 제외하였습니다.
-feature importance는 예측을 수행할 때 각 입력 변수가 예측 결과에 미치는 상대적인 영향을 나타내며, 변수의 중요성을 순위로 나열하는 데에 사용됩니다. 따라서, 모델 학습에 반영할 feature들을 선택하기 위하여 Random Forest를 활용하였습니다.
+            feature importance는 예측을 수행할 때 각 입력 변수가 예측 결과에 미치는 상대적인 영향을 나타내며, 변수의 중요성을 순위로 나열하는 데에 사용됩니다. 따라서, 모델 학습에 반영할 feature들을 선택하기 위하여 Random Forest를 활용하였습니다.
           </p>
         </div>
         <!-- Your image here -->
         <img src="static/images/feature importances.jpg" alt="feature importances"/>
+        <div class="content has-text-justified">
+          <p>
+            
+            또한, 기준으로 삼은 3개의 축(0.05, 0.06, 0.07)에 따른 correlation을 확인해보았습니다.
+          </p>
+        </div>
+        <!-- Your image here -->
+        <img src="static/images/data_fin_dropna_drop_corr05.jpg" alt="data_fin_dropna_drop_corr05"/>
+        <img src="static/images/data_fin_dropna_drop_corr06.jpg" alt="data_fin_dropna_drop_corr06"/>
+        <img src="static/images/data_fin_dropna_drop_corr07.jpg" alt="data_fin_dropna_drop_corr07"/>
       </div>
       <div class="item">
         
