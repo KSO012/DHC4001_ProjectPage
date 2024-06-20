@@ -195,13 +195,14 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method</h2>
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            본 프로젝트는 수축기·이완기 혈압을 제외한 다른 데이터로 고혈압을 예측하는 것을 목표로 합니다. 이에 기준년도와 가입자일련번호, 구강검진수검여부는 기여도 낮을 것으로 생각하였고, 기준년도, 가입자일련번호, 수축기혈압, 이완기혈압, 구강검진수검여부 column을 사전에 제외하였습니다.
+feature importance는 예측을 수행할 때 각 입력 변수가 예측 결과에 미치는 상대적인 영향을 나타내며, 변수의 중요성을 순위로 나열하는 데에 사용됩니다. 따라서, 모델 학습에 반영할 feature들을 선택하기 위하여 Random Forest를 활용하였습니다.
           </p>
         </div>
+        <!-- Your image here -->
+        <img src="static/images/feature importances.jpg" alt="feature importances"/>
       </div>
       <div class="item">
         
