@@ -529,10 +529,16 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Conlusion</h2>
+        <h2 class="title is-3">Conclusion</h2>
         <div class="content has-text-justified">
           <p>
-            
+            본 프로젝트를 통해 국민건강보험공단 건강검진정보 데이터를 활용하여 고혈압을 예측하는 모델을 개발하였습니다. 4개년 치의 건강검진 데이터를 사용하였으며, 데이터 전처리 과정에서 일치하지 않는 column을 일치시키는 작업을 수행하였습니다. 수정한 데이터를 기반으로. 결측치를 처리하고, 수축기·이완기 혈압 데이터를 통해 고혈압 여부 column을 추가하였으며, under-sampling 기법으로 데이터 불균형을 해결하습니다 또한, 주요 특성을 선별하는 작업을 통해 모델에 쓰일 핵심 feature을 선별하였습니다. 이후, 선정된 feature 별로 4개의 모델(Logistic Regression, Decision Tree, Random Forest, XGBoost)의 예측 성능을 확인해 보았습니다.
+          </p>
+          <p>
+            XGBoost 모델이 가장 좋은 성능을 보인 이유는 약한 분류기(weak learner)를 보완하여 강력한 분류기(strong learner)를 만드는 방식이기 때문으로 판단되며, 모델 학습에 사용되는 feature는 개수보다는 기여도가 중요하다는 결론을 내릴 수 있었습니다. 
+          </p>
+          <p>
+            향후 프로젝트에서는 고혈압 예측 모델의 성능을 높이기 위해 hyper-parameter 튜닝 기법을 적용하고자 합니다. 최적의 hyper-parameter를 찾아 모델 학습에 반영한다면, 모델의 성능을 향상시킬 수 있을 것으로 생각합니다.
           </p>
         </div>
       </div>
