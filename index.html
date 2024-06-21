@@ -153,7 +153,7 @@
         <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            고혈압<sup>[1]</sup>은 심혈관 질환과 같은 합병증의 주요 위험 요인 중 하나로, 조기 발견 및 관리가 중요합니다. 그러나 고혈압은 초기 증상이 뚜렷하지 않아, 정기적인 건강검진을 통한 모니터링을 필요로 합니다. 따라서, 본 프로젝트는 <strong>국민건강보험공단 건강검진정보 데이터를 활용하여 고혈압을 예측하는 모델을 개발</strong>하고자 하였니다.
+            고혈압<sup>[1]</sup>은 심혈관 질환과 같은 합병증의 주요 위험 요인 중 하나로, 조기 발견 및 관리가 중요합니다. 그러나 고혈압은 초기 증상이 뚜렷하지 않아, 정기적인 건강검진을 통한 모니터링을 필요로 합니다. 따라서, 본 프로젝트는 <strong>국민건강보험공단 건강검진정보 데이터를 활용하여 고혈압을 예측하는 모델을 개발</strong>하고자 하였습니다.
           </p>
         </div>
       </div>
@@ -168,6 +168,35 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Method Summary</h2>
+        <h5 class="title is-3">1. csv file processing</h5>
+        <div class="content has-text-justified">
+          <p>
+            국민건강보험공단의 2019~2022년 건강검진 데이터 csv 파일을 확인한 결과, 2019년 데이터의 column 수와 명칭이 다른 연도(2020년~2022년)의 데이터와 상이한 것을 확인하였습니다. 이에 따라, 2019년 데이터의 컬럼 수와 이름을 다른 연도의 데이터와 일치하도록 수정하였습니다.
+          </p>
+        </div>
+        
+      <div class="content has-text-justified">
+        <p>
+
+        </p>
+        <h5 class="title is-3">2. proprocessing</h5>
+        <div class="content has-text-justified">
+          <p>
+            먼저, 결측치가 있는 행을 모두 제거하였습니다. 고혈압 예측 모델에 있어서, 결측치가 있는 행을 제외하는 것이 다른 값으로 대체하는 것보다 더 적절할 것으로 판단하였기 때문입니다.
+          </p>
+          <p>
+            다음으로, 고혈압 여부 column을 추가하였습니다. 고혈압 여부는 NIH 기준에 따라 수축기·이완기 혈압 데이터를 바탕으로 생성하였습니다.
+          </p>
+          <p>
+            이후, 고혈압 여부 column의 데이터가 불균형한 것을 확인하였습니다. 이를 해결하기 위핸 under-sampling 기법을 적용하여 고혈압이 아닌 환자와 고혈압인 환자의 데이터 균형을 맞추었습니다.
+          </p>
+        </div>
+
+      <div class="content has-text-justified">
+        <p>
+
+        </p>
+        <h5 class="title is-3">3. feature importance</h5>
         <div class="content has-text-justified">
           <p>
             국민건강보험공단의 2019~2022년 건강검진 데이터를 사용하여 고혈압 예측 모델을 구현하였습니다. 데이터 전처리 과정에서 결측치를 처리하고, NIH<sup>[2]</sup> 기준에 따라 수축기·이완기 혈압 데이터를 통해 고혈압 여부 column을 추가하였습니다. 이후, Random Forest를 활용하여 주요 특성을 선별하고, 상관관계 분석을 통해 최종 특성들을 선택하였습니다. 마지막으로, Logistic Regression, Decision Tree, Random Forest, XGBoost 등으로 다양한 모델을 만들고 성능을 평가하였습니다.
@@ -457,7 +486,7 @@
         <h2 class="title is-3">Experimental Results</h2>
         <div class="content has-text-justified">
           <p>
-            Logistic Regression은 기준으로 삼은 축이 0.06일 때, Decision Tree는 기준으로 삼은 축이 0.05, Random Forest는 기준으로 삼은 축이 0.05일 때, XGBoost는 기준으로 삼은 축이 0.05일 때, 모델의 성능이 좋다는 것을 알 수 있다.
+            Logistic Regression 모델은 기준 축을 0.06으로 설정하였을 때, Decision Tree 모델은 기준 축을 0.05로 설정하였을 때, Random Forest 모델은 기준 축을 0.05로 설정하였을 때, XGBoost 모델은 기준 축을 0.05로 설정하였을 때, 가장 좋은 성능을 나타낸 것을 확인할 수 있습니다. 또한, 실험한 4개의 모델 중 가장 성능이 좋은 모델은 XGBoost 모델이라는 것을 알 수 있습니다.
           </p>
         </div>
         
@@ -499,7 +528,23 @@
 </section>
 <!-- End Experiments -->
 
-
+  
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Conlusion</h2>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 
 
